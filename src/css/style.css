@@ -1,0 +1,178 @@
+@font-face {
+  font-family: 'Exo2.0-Thin';
+  src: url(../fonts/Exo/Exo20-Thin.otf) format("opentype"), url(../fonts/Exo/Exo20-Thin.woff) format("woff"), url(../fonts/Exo/Exo20-Thin.woff2) format("woff2"), url(../fonts/Exo/Exo20-Thin.ttf) format("truetype"); }
+html {
+  height: 100%;
+  font-size: 10px; }
+
+body, h1, p {
+  margin: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1; }
+
+body {
+  height: 100%;
+  background: url(../image/background.png); }
+  body::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), color-stop(transparent), to(rgba(0, 0, 0, 0.5)));
+    background: linear-gradient(rgba(0, 0, 0, 0.5), transparent, rgba(0, 0, 0, 0.5));
+    z-index: -1; }
+
+.main {
+  height: 100%;
+  display: table;
+  margin: 0 auto; }
+  .main__content {
+    display: table-cell;
+    vertical-align: middle; }
+    .main__content .main__title {
+      text-align: center;
+      font-size: 3.6rem;
+      font-family: 'Exo2.0-Thin', 'Trebuchet MS', sans-serif;
+      font-weight: 100;
+      color: #ffffff; }
+    .main__content .product__list {
+      margin-top: 2.3rem;
+      display: -webkit-box;
+      display: flex;
+      flex-wrap: wrap;
+      -webkit-box-pack: center;
+      justify-content: center; }
+      .main__content .product__list .product {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        overflow: hidden; }
+        .main__content .product__list .product__border {
+          margin-left: 4rem;
+          margin-right: 4rem;
+          padding: 4px;
+          border-radius: 12px;
+          background: linear-gradient(135deg, transparent 31.5px, #1698d9 0); }
+          .main__content .product__list .product__border .item {
+            position: relative;
+            height: 47.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            background: url(../image/cat.png), linear-gradient(135deg, transparent 30px, #f2f2f2 0);
+            background-repeat: no-repeat;
+            background-position: 51% 178%; }
+            .main__content .product__list .product__border .item__title {
+              padding: 2.1rem 0 0 4.4rem;
+              font-size: 1.6rem;
+              font-family: 'Trebuchet MS', sans-serif;
+              color: #666666; }
+            .main__content .product__list .product__border .item__name {
+              padding: 1rem 6rem 0 4.1rem;
+              font-size: 4.8rem;
+              font-family: 'Trebuchet MS', sans-serif;
+              font-weight: bold; }
+            .main__content .product__list .product__border .item__taste {
+              padding: 0.4rem 0 0 4.4rem;
+              font-size: 2.4rem;
+              font-family: 'Trebuchet MS', sans-serif;
+              font-weight: bold; }
+            .main__content .product__list .product__border .item__present {
+              padding: 1.7rem 0 3.3rem 4.4rem;
+              font-size: 1.4rem;
+              line-height: 1.2;
+              font-family: 'Trebuchet MS', sans-serif;
+              color: #666666; }
+              .main__content .product__list .product__border .item__present span {
+                display: block; }
+            .main__content .product__list .product__border .item__weight {
+              position: absolute;
+              bottom: 1.2rem;
+              right: 1.2rem;
+              width: 8rem;
+              height: 8rem;
+              display: -webkit-box;
+              display: flex;
+              text-align: center;
+              -webkit-box-orient: vertical;
+              -webkit-box-direction: normal;
+              flex-direction: column;
+              -webkit-box-pack: center;
+              justify-content: center;
+              border-radius: 100%;
+              font-family: 'Trebuchet MS', sans-serif;
+              font-size: 4.2rem;
+              background-color: #1698d9;
+              color: white; }
+              .main__content .product__list .product__border .item__weight span {
+                display: block;
+                font-size: 2.1rem; }
+        .main__content .product__list .product__footer {
+          margin-top: 1.5rem;
+          text-align: center;
+          font-family: 'Trebuchet MS', sans-serif;
+          font-size: 1.3rem;
+          color: white; }
+          .main__content .product__list .product__footer span {
+            color: #1698d9; }
+          .main__content .product__list .product__footer .product__buy {
+            border-bottom: 1px dashed #1698d9;
+            cursor: pointer;
+            font-weight: bold; }
+        .main__content .product__list .product_active .product__border {
+          background: linear-gradient(135deg, transparent 31.5px, #d91667 0); }
+          .main__content .product__list .product_active .product__border .item__weight {
+            background-color: #d91667; }
+        .main__content .product__list .product_ended {
+          pointer-events: none; }
+          .main__content .product__list .product_ended .product__border {
+            background: linear-gradient(135deg, transparent 31.5px, #b3b3b3 0); }
+            .main__content .product__list .product_ended .product__border .item {
+              position: relative;
+              cursor: default; }
+              .main__content .product__list .product_ended .product__border .item::before {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0px;
+                left: 0px;
+                border-radius: 6px;
+                opacity: 0.5;
+                background: linear-gradient(135deg, transparent 30px, #f2f2f2 0); }
+              .main__content .product__list .product_ended .product__border .item p {
+                opacity: 0.15; }
+              .main__content .product__list .product_ended .product__border .item .item__title {
+                opacity: 0.3; }
+              .main__content .product__list .product_ended .product__border .item .item__present {
+                opacity: 0.25; }
+              .main__content .product__list .product_ended .product__border .item .item__weight {
+                opacity: 1;
+                background-color: #b3b3b3; }
+          .main__content .product__list .product_ended .product__footer {
+            color: #ffff66; }
+
+@media (max-width: 1199px) and (min-width: 800px) {
+  .main__content {
+    padding-top: 5.2rem; }
+    .main__content .product {
+      padding-bottom: 5.2rem; } }
+@media (max-width: 799px) {
+  .main__content {
+    padding-top: 2.6rem; }
+    .main__content .product {
+      padding-bottom: 2.6rem; } }
+@media (max-width: 375px) {
+  .main__content .product__list .product__border {
+    margin-left: 1.3rem;
+    margin-right: 1.3rem; } }
+@media (max-width: 340px) {
+  .main__content .product__list .product__border .item .item__name {
+    padding: 1rem 3rem 0 4.1rem; } }
+@media (-ms-high-contrast: active), (-ms-high-contrast: none) and (max-width: 1199px) {
+  .main {
+    display: block; }
+    .main .main__content {
+      display: block; } }

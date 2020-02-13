@@ -1,0 +1,1 @@
+const all="./js/main_all.js",ie="./js/main_ie.js",isIE=!!document.documentMode,script=document.createElement("script");script.src=isIE?ie:all,document.body.appendChild(script);
